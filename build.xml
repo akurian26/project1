@@ -1,0 +1,15 @@
+<project name="Project1" basedir="." default="main">
+
+    <target name="clean">
+        <delete file="WebServer.class"/>
+	<delete file="WebWorker.class"/>
+    </target>
+
+    <target name="compile">
+        <javac srcdir="." destdir="." includeantruntime="false" fork="true"/>
+    </target>
+
+
+    <target name="main" depends="clean,compile"/>
+
+</project>
